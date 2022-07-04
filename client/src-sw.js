@@ -37,6 +37,7 @@ const matchCallback = ({ request }) => {
     );
 };
 
+// TODO: Implement asset caching
 registerRoute(
     matchCallback,
     new StaleWhileRevalidate({
@@ -48,7 +49,3 @@ registerRoute(
         ],
     })
 );
-// TODO: Implement asset caching
-// registerRoute(()=>{
-
-// });
