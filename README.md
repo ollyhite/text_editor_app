@@ -30,7 +30,12 @@ AS A developer, I want to create notes or code snippets with or without an inter
 - git clone with my repo link (can copy Installation section's first line)
 - cd in the text_editor_app file
 - enter "npm i" to install the node_module
-- run npm start:dev this command to build front end dist file and can open the website
+
+```
+    npm i
+```
+
+- next run npm start:dev this command to build front end dist file and can open the website
 
 ```
     npm run start:dev
