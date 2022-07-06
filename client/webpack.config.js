@@ -22,6 +22,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
       template: './index.html',
+      favicon:'./favicon.ico',
       title: 'Text Editor',
     }),
       new WorkboxPlugin.GenerateSW(),
@@ -31,14 +32,20 @@ module.exports = () => {
         description: 'Keep track of important tasks!',
         background_color: '#7eb4e2',
         theme_color: '#7eb4e2',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
+        fingerprints:false,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
+          // {
+          //   src: path.resolve('favicon.ico'),
+          //   sizes: [1],
+          //   destination: path.join('assets', 'icons'),
+          // },
         ],
       }),
       new InjectManifest({

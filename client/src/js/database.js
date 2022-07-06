@@ -35,10 +35,14 @@ export const getDb = async () => {
     const jateDb = await openDB('jate', 1);
     const tx = jateDb.transaction('jate', 'readonly');
     const store = tx.objectStore('jate');
-    const request = store.getAll();
+    // const request = store.getAll();
+    const request = store.get(1);
     const result = await request;
     console.log('result.value', result);
-    return result;
+    //if result is true will retrun result.content, false to return nudifined
+    //eqaul -> return result ?result.content:result;
+    return result && result.content;
+    // return result.content;
   }catch(err){
     console.error('getDb not implemented');
   }
