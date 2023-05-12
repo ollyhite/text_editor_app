@@ -4,7 +4,7 @@
 
 ## Live Link
 
-https://lovely-grand-teton-23075.herokuapp.com/
+https://peiyunhite-text-editor-app.herokuapp.com/
 
 ## Description
 
